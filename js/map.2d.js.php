@@ -228,7 +228,7 @@ $( document ).ready(function() {
 	    maxZoom: 18,
 	    noWrap: <?php if (isset($globalMapWrap) && !$globalMapWrap) print 'false'; else print 'true'; ?>,
 	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-	      '<a href="www.openstreetmap.org/copyright">Open Database Licence</a>'
+	      '<a href="http://www.openstreetmap.org/copyright">Open Database Licence</a>'
 	}).addTo(map);
 <?php
 	} elseif ($MapType == 'OpenSeaMap') {
@@ -238,7 +238,7 @@ $( document ).ready(function() {
 	    noWrap: <?php if (isset($globalMapWrap) && !$globalMapWrap) print 'false'; else print 'true'; ?>,
 	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'&copy; <a href="http://openseamap.org">OpenSeaMap</a> contributors, ' +
-	      '<a href="www.openstreetmap.org/copyright">Open Database Licence</a>'
+	      '<a href="http://www.openstreetmap.org/copyright">Open Database Licence</a>'
 	}).addTo(map);
 <?php
 	} elseif ($MapType == 'ArcGIS-Streetmap') {
