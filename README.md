@@ -1,9 +1,9 @@
 [![Build Status](https://scrutinizer-ci.com/g/Ysurac/FlightAirMap/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Ysurac/FlightAirMap/build-status/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dd8cce1cf0d74442a8cba7d003240b24)](https://www.codacy.com/app/Ysurac/FlightAirMap?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ysurac/FlightAirMap&amp;utm_campaign=Badge_Grade)
 
-# FlightAirMap
+# [FlightAirMap](https://github.com/jg3hlx/FlightAirMap)
 
-FlightAirMap is a fork of Barrie Spotter [https://github.com/barriespotter/Web_App](https://github.com/barriespotter/Web_App) with map, airspaces, METAR, PDO and ADS-B support.
+This FlightAirMap supports maps, satellite, AIS, ADS-B, and APRS.
 
 Browse through the data based on a particular aircraft, airline or airport to search through the database. See extensive statistics such as most common aircraft type, airline, departure & arrival airport and busiest time of the day, or just explore flights.
 
@@ -25,14 +25,6 @@ For trackers, APRS is a supported source, so cars, trucks, mobile phones,... can
 
 ## Official Website
 [https://www.flightairmap.com/](https://www.flightairmap.com/)
-
-## Demo
-* From ADS-B, real flights: [https://real.flightairmap.com/](https://real.flightairmap.com/)
-* From Open Glider Network: [https://ogn.flightairmap.com/](https://ogn.flightairmap.com/)
-* From IVAO, virtual flights: [https://ivao.flightairmap.com/](https://ivao.flightairmap.com/)
-* From VATSIM, virtual flights: [https://vatsim.flightairmap.com/](https://vatsim.flightairmap.com/)
-* From APRS Trackers: [https://tracker.flightairmap.com/](https://tracker.flightairmap.com/)
-* From AIS, real vessels: [https://marine.flightairmap.com/](https://marine.flightairmap.com/)
 
 ## Documentation
 
