@@ -756,7 +756,7 @@ class Common {
 	public function getUserIP() { 
 		$client = @$_SERVER['HTTP_CLIENT_IP'];
 		$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-		return filter_var($client, FILTER_VALIDATE_IP) ? $client : filter_var($forward, FILTER_VALIDATE_IP) ? $forward : $_SERVER['REMOTE_ADDR']; 
+		return filter_var($client, FILTER_VALIDATE_IP) ? $client : (filter_var($forward, FILTER_VALIDATE_IP) ? $forward : $_SERVER['REMOTE_ADDR']);
 	}
 	public function replace_mb_substr($string, $offset, $length)
 	{
@@ -775,7 +775,7 @@ class Common {
 		//NOTE: use a trailing slash for folders!!!
 		//see http://bugs.php.net/bug.php?id=27609
 		//see http://bugs.php.net/bug.php?id=30931
-		if ($path{strlen($path)-1}=='/') // recursively return a temporary file path
+		if ($path[strlen($path)-1]=='/') // recursively return a temporary file path
 			return $this->is__writable($path.uniqid(mt_rand()).'.tmp');
 		else if (is_dir($path))
 			return $this->is__writable($path.'/'.uniqid(mt_rand()).'.tmp');
