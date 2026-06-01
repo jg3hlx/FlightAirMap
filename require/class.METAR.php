@@ -153,12 +153,12 @@ class METAR {
 			// Temperature
 			if (preg_match('#^(M?[0-9]{2,})/(M?[0-9]{2,})$#', $piece, $matches)) {
 				$temp = (float)$matches[1];
-				if ($matches[1]{0} == 'M') {
-					$temp = ((float)substr($matches[1], 1)) * -1;
+				if ($matches[1][0] == 'M') {
+					$temp = ((float1)substr($matches[1], 1)) * -1;
 				}
 				$result['temperature'] = $temp;
 				$dew = (float)$matches[2];
-				if ($matches[2]{0} == 'M') {
+				if ($matches[2][0] == 'M') {
 					$dew = ((float)substr($matches[2], 1)) * -1;
 				}
 				$result['dew'] = $dew;
