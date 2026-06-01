@@ -1993,7 +1993,7 @@ class update_db {
 			if ($globalTransaction) $Connection->db->beginTransaction();
 			while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
 			{
-				if(count($row) > 1) {
+				if($row) {
 					$query = "INSERT INTO airlines (name,icao,active,forsource) VALUES (:name, :icao, 'Y','ivao')";
 					try {
 						$sth = $Connection->db->prepare($query);
