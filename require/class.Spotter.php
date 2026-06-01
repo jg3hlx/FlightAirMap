@@ -11984,7 +11984,7 @@ class Spotter{
     
 			$row = $sth->fetch(PDO::FETCH_ASSOC);
 			$sth->closeCursor();
-			if (count($row) > 0) {
+			if ($row) {
 				return $row;
 			} else return '';
 		} catch (PDOException $e) {
