@@ -2373,7 +2373,7 @@ class Marine{
     
 			$row = $sth->fetch(PDO::FETCH_ASSOC);
 			$sth->closeCursor();
-			if (count($row) > 0) {
+			if (count($row ?? []) > 0) {
 				return $row;
 			} else return '';
 		} catch (PDOException $e) {
