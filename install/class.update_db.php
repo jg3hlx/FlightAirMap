@@ -380,7 +380,7 @@ class update_db {
             				// Check if we can find ICAO, else set it to GLID
             				$aircraft_name_split = explode(' ',$aircraft_name);
             				$search_more = '';
-            				if (count($aircraft_name) > 1 && strlen($aircraft_name_split[1]) > 3) $search_more .= " AND LIKE '%".$aircraft_name_split[0]."%'";
+            				if (count($aircraft_name_split) > 1 && strlen($aircraft_name_split[1]) > 3) $search_more .= " AND LIKE '%".$aircraft_name_split[0]."%'";
             				$query_search = "SELECT * FROM aircraft WHERE type LIKE '%".$aircraft_name."%'".$search_more;
             				$sth_search = $Connection->db->prepare($query_search);
 					try {
