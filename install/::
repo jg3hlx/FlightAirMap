@@ -2802,7 +2802,7 @@ class update_db {
 		'engineering.txt','education.txt','military.txt','radar.txt','cubesat.txt','other.txt','tle-new.txt','visual.txt','sarsat.txt','argos.txt','ses.txt','iridium-NEXT.txt','beidou.txt');
 		foreach ($alltle as $filename) {
 			if ($globalDebug) echo "downloading ".$filename.'...';
-			update_db::download('http://celestrak.com/NORAD/elements/'.$filename,$tmp_dir.$filename);
+			update_db::download('https://celestrak.org/NORAD/elements/'.$filename,$tmp_dir.$filename);
 			if (file_exists($tmp_dir.$filename)) {
 				if ($globalDebug) echo "Add to DB ".$filename."...";
 				$error = update_db::tle($tmp_dir.$filename,str_replace('.txt','',$filename));
@@ -2831,7 +2831,7 @@ class update_db {
 	public static function update_celestrak() {
 		global $tmp_dir, $globalDebug;
 		if ($globalDebug) echo "Download Celestrak DB : Download...";
-		update_db::download('http://celestrak.com/pub/satcat.txt',$tmp_dir.'satcat.txt');
+		update_db::download('https://celestrak.prg/pub/satcat.txt',$tmp_dir.'satcat.txt');
 		if (file_exists($tmp_dir.'satcat.txt')) {
 			if ($globalDebug) echo "Add to DB...";
 			$error = update_db::satellite_celestrak($tmp_dir.'satcat.txt');
